@@ -1,0 +1,70 @@
+@import '../../../styles/style.module.scss';
+
+
+.switchContainer {
+  .label {
+    display: block;
+    font-size: 14px;
+    font-family: $fontSemiBold;
+  }
+}
+
+.switch {
+  background: none;
+  box-shadow: none;
+  font-size: 0;
+  border: none;
+  position: relative;
+  width: 45px;
+  height: 15px;
+  cursor: pointer;
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    border-radius: 10px;
+    z-index: 0;
+  }
+
+  .switchButton {
+    width: 25px;
+    height: 25px;
+    @include border-radius(50%);
+    display: inline-block;
+    position: absolute;
+    z-index: 4;
+    left: 0;
+    top: -5px;
+    right: auto;
+  }
+
+  &.enabled {
+    .switchButton {
+      right: 0;
+      left: auto;
+    }
+  }
+
+  &.primary {
+    &:after {
+      background: rgba($tertiaryColor, 0.3);
+    }
+    .switchButton {
+      background: $tertiaryColor;
+    }
+  }
+
+  &.secondary {
+    &:after {
+      background: rgba($secondaryColor, 0.3);
+    }
+    .switchButton {
+      background: $secondaryColor;
+    }
+  }
+}

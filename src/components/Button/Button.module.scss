@@ -1,0 +1,55 @@
+@import "../../../styles/style.module.scss";
+
+.btn {
+  border: none;
+  padding: 10px 16px;
+  font-size: 13px;
+  font-family: $fontSemiBold;
+  line-height: 16px;
+  @include border-radius(5px);
+  @include box-shadow(0 2px 4px 0 rgba(0, 0, 0, 0.2));
+  @extend .textUppercase;
+  min-width: 100px;
+  cursor: pointer;
+  &.fullWidth {
+    width: 100%;
+  }
+}
+
+.primaryBtn {
+  @extend .btn;
+  background: $secondaryColor;
+  color: $white;
+  transition: all 0.5s ease;
+  &:hover {
+    background: #fc9916;
+    color: $white;
+  }
+}
+
+.secondaryBtn {
+  @extend .btn;
+  background: $white;
+  color: $secondaryColor;
+  &:hover {
+    background: rgba($primaryColor, 0.08);
+  }
+  &.outlined {
+    border: 1px solid $secondaryColor;
+  }
+}
+
+.tertiaryBtn {
+  @extend .btn;
+  background: transparent;
+  color: $secondaryColor;
+  box-shadow: none;
+  padding: 0;
+  min-width: auto;
+}
+
+.disable {
+  pointer-events: none;
+  cursor: not-allowed;
+  opacity: 0.5;
+}

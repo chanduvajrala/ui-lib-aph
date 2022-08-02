@@ -1,0 +1,50 @@
+@import '../../../styles/style.module.scss';
+
+
+.autocompleteContainer{
+    width: 100%;
+    position: relative;
+    .formControl{
+        label{
+            display: block;
+            font-size: 14px;
+        }
+    }
+    .autocompleteInput{
+        padding: 10px;
+        font-size: 16px;
+        font-family: $fontMedium;
+        line-height: 16px;
+        border:none;
+        border-bottom:2px solid $primaryColor;
+        box-shadow: none;
+        background: transparent;
+        color: $primaryColor;
+        &:focus, &:focus-visible{
+            outline: none;
+            border-color: $tertiaryColor;
+        }
+        &::placeholder{
+            color: rgba($primaryColor, 0.5);
+        }
+    }
+}
+
+.noData{
+    padding: 10px;
+    font-size: 16px;
+    font-family: $fontMedium;
+}
+.autocompleteList{
+    background: $white;
+    padding: 10px 0;
+    li{
+        padding: 10px ;
+        cursor: default;
+        
+        &:hover{
+            background: $lightGrey;
+        }
+        
+    }
+}

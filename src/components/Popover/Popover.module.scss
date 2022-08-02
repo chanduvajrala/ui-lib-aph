@@ -1,0 +1,59 @@
+@import '../../../styles/style.module.scss';
+
+.popoverContainer {
+    position: relative;
+    .popoverButton {
+        border: none;
+        padding: 10px 16px;
+        font-size: 13px;
+        font-family: $fontSemiBold;
+        line-height: 16px;
+        @include border-radius(5px);
+        @include box-shadow(0 2px 4px 0 rgba(0, 0, 0, 0.2));
+        @extend .textUppercase;
+        min-width: 100px;
+        cursor: pointer;
+        color: $white;
+        background: $secondaryColor;
+        &:focus-visible{
+            outline: none;
+        }
+    }
+    .popoverContent{
+        position: fixed;
+        bottom: 20px;
+        right:20px;
+        padding: 10px;
+        background: $white;
+        @include border-radius(10px);
+        @include box-shadow(0 2px 4px 0 rgba(0, 0, 0, 0.2));
+        z-index: 9;
+        max-width: 300px;
+        max-height: 150px;
+        overflow: hidden;
+        &.topLeft{
+            top:20px;
+            left:20px;
+            right:auto;
+            bottom:auto;
+        }
+        &.topRight{
+            top:20px;
+            left:auto;
+            right:20px;
+            bottom:auto;
+        }
+        &.bottomLeft{
+            top:auto;
+            left:20px;
+            right:auto;
+            bottom:20px;
+        }
+        &.bottomRight{
+            top:auto;
+            left:auto;
+            right:20px;
+            bottom:20px;
+        }
+    }
+}

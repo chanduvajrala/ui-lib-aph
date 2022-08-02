@@ -1,0 +1,101 @@
+#next {
+  height: 100%;
+}
+
+.container {
+  width: 1064px;
+  margin: auto;
+  height: 100%;
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+  }
+}
+
+.textCenter {
+  text-align: center;
+}
+
+.textUppercase {
+  text-transform: uppercase;
+}
+.textCapitalize {
+  text-transform: capitalize;
+}
+.textEllipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.lineClamp {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  // word-break: break-word;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.alignItemsStart {
+  align-items: flex-start;
+}
+
+.alignItemsEnd {
+  align-items: flex-end;
+}
+
+.justifyContentStart {
+  justify-content: flex-start;
+}
+
+.justifyContentEnd {
+  justify-content: flex-end;
+}
+
+.justifyContentCenter {
+  justify-content: center;
+}
+
+.textPrimary {
+  color: $primaryColor;
+}
+
+.textSecondary {
+  color: $secondaryColor;
+}
+
+.scroll {
+  overflow: auto;
+  &::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #ccc;
+  }
+}
+
+.hideVisibility {
+  visibility: hidden;
+}
+
+.displayNone {
+  display: none;
+}
+

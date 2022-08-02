@@ -1,0 +1,19 @@
+@import './fonts/fonts.module.scss';
+@import '../styles/default.scss';
+
+
+.componentContainer{
+  display:flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  .component{
+    width: 50%;
+    @extend .flexCenter;
+    flex-direction: column;
+    max-height: 500px;
+    min-height: 300px;
+    padding: 30px;
+  background: $white;
+  border: 1px solid $primaryColor
+  }
+}

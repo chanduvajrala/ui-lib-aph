@@ -1,0 +1,53 @@
+@import '../../../styles/style.module.scss';
+
+.accordionContainer{
+    width: 100%;
+.accordion {
+    border-bottom: 1px solid rgba($primaryColor, 0.3);
+    &:last-child {
+      border: none;
+    }
+    .accordionPanel {
+      padding: 12px 15px 12px 0;
+      @extend .flex;
+      align-items: flex-start;
+      position: relative;
+      cursor: pointer;
+      &:after{
+        content: '';
+        position: absolute;
+        top:15px;
+        right:20px;
+        width: 10px;
+        height: 10px;
+        border: 2px solid transparent;
+        transform: rotate(45deg);
+        @include border-radius(2px);
+        border-bottom-color: $primaryColor;
+        border-right-color: $primaryColor;
+      }
+      h2 {
+        font-size: 14px;
+        line-height: 24px;
+        margin: 0;
+        font-family: $fontMedium;
+        @media only screen and (max-width: 768px) {
+          width: 90%;
+        }
+      }
+      &.active{
+        &:after{
+          transform: rotate(225deg);
+          top:22px;
+        }
+      }
+    }
+    .accordionPanelDetails {
+      padding: 0 0 20px;
+      .panelContent {
+        font-size: 12px;
+        line-height: 20px;
+      }
+    }
+  }
+}

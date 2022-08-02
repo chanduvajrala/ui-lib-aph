@@ -1,0 +1,38 @@
+@import '../../../styles/style.module.scss';
+
+.tabContainer {
+  width: 100%;
+}
+
+.tabList {
+  @extend .flex;
+  justify-content: unset;
+  border-bottom: 1px solid rgba($primaryColor, 0.3);
+  .tab {
+    padding: 12px;
+    border: none;
+    box-shadow: none;
+    background: $white;
+    min-width: 120px;
+    border-bottom: 5px solid transparent;
+    font-size: 14px;
+    font-family: $fontSemiBold;
+    opacity: 0.3;
+    display: inline-block;
+    color: $primaryColor;
+    &.selected {
+      border-color: $tertiaryColor;
+      opacity: 1;
+    }
+    &:focus-visible {
+      outline: none;
+    }
+  }
+}
+
+.tabContent {
+  padding: 10px;
+  width: 100%;
+}
+.tabPanel {
+}

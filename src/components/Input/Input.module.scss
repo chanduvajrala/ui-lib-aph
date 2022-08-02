@@ -1,0 +1,35 @@
+@import '../../../styles/style.module.scss';
+
+.formControl{
+    &.fullWidth{
+        width: 100%;
+    }
+    label{
+        display: block;
+        font-size: 14px;
+        font-family: $fontMedium;
+    }
+    .input{
+        padding: 10px;
+        font-size: 16px;
+        font-family: $fontMedium;
+        line-height: 16px;
+        border:none;
+        border-bottom:2px solid $primaryColor;
+        box-shadow: none;
+        background: transparent;
+        color: $primaryColor;
+        &:focus, &:focus-visible{
+            outline: none;
+            border-color: $tertiaryColor;
+        }
+        &::placeholder{
+            color: rgba($primaryColor, 0.5);
+        }
+    }
+    .errorMsg{
+        display: block;
+        font-size: 12px;
+        color: $errorColor;
+    }
+}

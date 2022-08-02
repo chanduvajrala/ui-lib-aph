@@ -1,0 +1,12 @@
+@import '../../../styles/style.module.scss';
+
+.cpContainer{
+    padding: 10px;
+    @extend .flexCenter;
+    width:70px;
+    height:70px;
+    img{
+        width: 50px;
+        height:50px;
+    }
+}

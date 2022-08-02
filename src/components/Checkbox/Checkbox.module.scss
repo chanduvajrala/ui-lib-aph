@@ -1,0 +1,79 @@
+@import '../../../styles/style.module.scss';
+
+.checkbox {
+  position: relative;
+  background: $white;
+  padding: 10px;
+  label {
+    padding: 10px 10px 10px 40px;
+    font-size: 14px;
+    font-family: $fontMedium;
+    position: relative;
+    &:before {
+      content: '';
+      position: absolute;
+      top: 12px;
+      left: 10px;
+      width: 20px;
+      height: 20px;
+      @include border-radius(4px);
+    }
+    &:after {
+      position: absolute;
+      top: 14px;
+      left: 12px;
+      color: $white;
+      width: 16px;
+      height: 16px;
+    }
+  }
+  input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    &:checked {
+      + label {
+        &:after {
+      content: '';
+          background: url('https://newassets.apollo247.com/images/ic_check_white.svg') no-repeat 0 0;
+          background-size: contain;
+        }
+      }
+    }
+  }
+  &.primary {
+    label {
+      &:before {
+        border: 2px solid $tertiaryColor;
+      }
+    }
+    input {
+      &:checked {
+        + label {
+          &:before {
+            background: $tertiaryColor;
+          }
+        }
+      }
+    }
+  }
+  &.secondary {
+    label {
+      &:before {
+        border: 2px solid $secondaryColor;
+      }
+    }
+    input {
+      &:checked {
+        + label {
+          &:before {
+            background: $secondaryColor;
+          }
+        }
+      }
+    }
+  }
+}

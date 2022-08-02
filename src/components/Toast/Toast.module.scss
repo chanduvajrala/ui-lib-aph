@@ -1,0 +1,57 @@
+@import '../../../styles/style.module.scss';
+
+.toastContainer{
+    position:fixed;
+    z-index: 999;
+    @extend .flexCenter;
+    margin: 0 auto;
+    &.top{
+        top: 50px;
+        bottom: auto;
+        left: 0;
+    right: 0;
+    }
+    &.bottom{
+        bottom: 50px;
+        top: auto;
+        left: 0;
+    right: 0;
+    }
+}
+.toastContent{
+    max-width: 1000px;
+    @include border-radius(5px);
+    @extend .flex;
+    padding: 10px ;
+    background: $tertiaryColor;
+    p{
+        font-size: 14px;
+        line-height: 18px;
+        color: $white;
+        padding: 0 30px 0 0;
+     }
+    &.success{
+        background: $tertiaryColor;
+    }
+    &.error{
+        background: $errorColor;
+    }
+    &.warning{
+        background: $secondaryColor;
+    }
+    &.info{
+        background: $aquaBlue;
+    }
+   
+}
+.closeToast{
+    width: 24px;
+    height:24px;
+    padding: 5px;
+    cursor: pointer;
+    @extend .flexCenter;
+    @include border-radius(50%);
+    &:hover{
+        background: rgba($white, 0.1);
+    }
+}

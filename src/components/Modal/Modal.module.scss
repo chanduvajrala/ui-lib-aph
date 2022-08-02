@@ -1,0 +1,64 @@
+@import '../../../styles/style.module.scss';
+
+.modalContainer{
+    position: fixed;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    z-index: 9;
+    @extend .flexCenter;
+    .modalBackdrop{
+        position: fixed;
+        top:0;
+        right:0;
+        bottom:0;
+        left:0;
+        background: rgba($black, 0.5);
+        z-index: 9;
+    }
+}
+.modalBox{
+    @include border-radius(10px);
+    background: $white;
+    height: 460px;
+    position: relative;
+    z-index: 10;
+    overflow: hidden;
+    &.sm{
+        width: 360px;
+    }
+    &.md{
+        width: 700px;
+    }
+    &.lg{
+        width: 1000px;
+    }
+}
+.modalTitle{
+    padding: 20px;
+    @include box-shadow(0 5px 20px 0 rgb(128 128 128 / 30%));
+    @extend .flex;
+    h2{
+        font-size: 16px;
+        font-family: $fontSemiBold;
+        line-height: 20px;
+    }
+    .modalClose{
+        cursor: pointer;
+        &:hover{
+            opacity: 0.7;
+        }
+    }
+}
+.modalContent{
+    padding: 20px;
+    height: calc(100% - 132px);
+    overflow: auto
+}
+.modalActions{
+    @include box-shadow(0 -5px 20px 0 rgb(128 128 128 / 30%));
+    padding: 16px 20px;
+    @extend .flex;
+    justify-content: flex-end;
+}

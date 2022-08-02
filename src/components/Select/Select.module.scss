@@ -1,0 +1,59 @@
+@import '../../../styles/style.module.scss';
+
+.selectContainer {
+    position: relative;
+    padding: 10px 40px 10px 10px;
+    font-size: 16px;
+    font-family: $fontMedium;
+    line-height: 16px;
+    border: none;
+    box-shadow: none;
+    background: transparent;
+    color: $primaryColor;
+    border-bottom: 2px solid $tertiaryColor;
+    cursor: pointer;
+    &:focus,
+    &:focus-visible {
+        outline: none
+    }
+    &::placeholder {
+        color: rgba($primaryColor, 0.5);
+    }
+    &:after {
+        content: '';
+        position: absolute;
+        top: 12px;
+        right: 10px;
+        // width: 8px;
+        // height: 8px;
+        border: 4px solid transparent;
+        transform: rotate(45deg);
+        @include border-radius(2px);
+        border-bottom-color: $tertiaryColor;
+        border-right-color: $tertiaryColor;
+    }
+}
+
+.selectContent {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    background: $white;
+    z-index: 2;
+    @include border-radius(10px);
+    @include box-shadow(0 0 8px rgb(0 0 0 / 8%));
+    &:focus-visible {
+        outline: none
+    }
+    li {
+        padding: 10px 0;
+        font-size: 16px;
+        border-bottom: 1px solid rgba($primaryColor, 0.2);
+
+        &:last-child {
+            border: none
+        }
+    }
+}

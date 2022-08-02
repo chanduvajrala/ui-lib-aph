@@ -1,0 +1,48 @@
+@import '../../../styles/style.module.scss';
+
+.radio {
+    padding: 10px 10px 10px 40px;
+    font-size: 14px;
+    font-family: $fontMedium;
+    position: relative;
+    cursor: pointer;
+    &:before,
+    &:after {
+        content: '';
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        @include border-radius(50%);
+        top: 12px;
+        left: 10px;
+    }
+    &:before {
+        z-index: 2;
+    }
+    &.checked {
+        &:after {
+            background: $white;
+            z-index: 1;
+        }
+    }
+    &.primary{
+        &:before {
+            border: 2px solid $tertiaryColor;
+        }
+        &.checked {
+            &:after {
+                border: 6px solid $tertiaryColor;
+            }
+        }
+    }
+    &.secondary{
+        &:before {
+            border: 2px solid $secondaryColor;
+        }
+        &.checked {
+            &:after {
+                border: 6px solid $secondaryColor;
+            }
+        }
+    }
+}
