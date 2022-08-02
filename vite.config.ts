@@ -1,5 +1,5 @@
 import react from '@vitejs/plugin-react';
-import path from 'node:path';
+import { resolve } from 'path'
 import { defineConfig } from 'vite';
 import dts from 'vite-plugin-dts';
 
@@ -12,7 +12,7 @@ export default defineConfig({
     ],
     build: {
         lib: {
-            entry: path.resolve(__dirname, 'src/index.tsx'),
+            entry: resolve(__dirname, 'src/index.tsx'),
             name: 'UiLib',
             formats: ['es', 'umd'],
             fileName: (format) => `ui-lib.${format}.js`,
