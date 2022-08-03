@@ -122,7 +122,7 @@ function App() {
           />
         </div>
         <div className={styles.component}>
-          <Button color="primary">Pimary</Button>
+          <Button color="primary">Primary</Button>
           <Button color="secondary">Secondary</Button>
           <Button color="tertiary">Tertiary</Button>
           <Button color="secondary" variant="outlined">
