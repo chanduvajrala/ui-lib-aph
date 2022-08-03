@@ -1,0 +1,18 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs';
+import Checkbox from '.'
+
+<Meta title="Checkbox" component={Checkbox} />
+
+# CheckBox
+
+<Canvas>
+<Story name='Default'>
+ <Checkbox color="primary" label="Checkbox" isChecked={false} onChange={()=>{}}/>
+</Story>
+<Story name='Secondary'>
+ <Checkbox color="secondary" label="Checkbox" isChecked={false} onChange={()=>{}}/>
+</Story>
+<Story name='Checked'>
+ <Checkbox color="primary" label="Checkbox" isChecked={true} onChange={()=>{}}/>
+</Story>
+</Canvas>
